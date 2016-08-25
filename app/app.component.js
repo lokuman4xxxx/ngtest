@@ -12,25 +12,16 @@ var core_1 = require('@angular/core');
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = {
-            id: 1,
-            name: 'windstorm'
-        };
     }
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n    <h1>{{title}}</h1>\n    <h2>{{hero.name}} details!</h2>\n    <div><label>id: </label>{{hero.id}}</div>\n    <div>\n        <label>name: </label>\n        <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n    </div>\n    "
+            template: "\n\t\t    <h1>{{title}}</h1>\n\t\t\t<nav>\n\t\t\t\t<a routerLink=\"/dashboard\" routerLinkActive=\"active\">Dashboard</a>\n\t\t\t\t<a routerLink=\"/heroes\" routerLinkActive=\"active\">Heroes</a>\n\t\t\t</nav>\n\t\t\t<router-outlet></router-outlet>\n\t\t",
+            styleUrls: ['app/app.component.css'],
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
-var Hero = (function () {
-    function Hero() {
-    }
-    return Hero;
-}());
-exports.Hero = Hero;
 //# sourceMappingURL=app.component.js.map
